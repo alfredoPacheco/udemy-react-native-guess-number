@@ -47,13 +47,15 @@ const StartGameScreen = (props) => {
   let confirmedOutput;
   if (confirmed) {
     confirmedOutput = (
-      <Card style={styles.summaryContainer}>
-        <Text>You selected</Text>
-        <NumberContainer>{selectedNumber}</NumberContainer>
-        <MainButton onPress={() => props.onStartGame(selectedNumber)}>
-          START GAME
-        </MainButton>
-      </Card>
+      <View>
+        <Card style={styles.summaryContainer}>
+          <Text>You selected</Text>
+          <NumberContainer>{selectedNumber}</NumberContainer>
+          <MainButton onPress={() => props.onStartGame(selectedNumber)}>
+            START GAME
+          </MainButton>
+        </Card>
+      </View>
     );
   }
 
